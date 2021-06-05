@@ -1,0 +1,125 @@
+.how-to{
+    width: 100%;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 32.5%;
+        left: 0;
+        width: 70%;
+        height: 1rem;
+        background-color: $light-grey;
+        z-index: 0;
+    }
+}
+.how-to-container{
+    width: 85%;
+    margin: 0 auto;
+    min-height: 100vh;
+    @include flex(space-between,center);
+    .how-to-card{
+        @include flex(flex-start,flex-start);
+        flex-direction: column;
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+        & > *{
+            z-index: 10;
+        }
+        .how-to-image img{
+            width: 90%;
+        }
+        h4{
+            margin: 3rem 0;
+            color: $dark-navy;
+        }
+        p{
+            color: $dim-grey;
+        }
+    }
+   
+
+}
+@media screen and (max-width: 1084px) {
+    .how-to-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .how-to{
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 12%;
+            width: 1rem;
+            height: 85%;
+            background-color: $light-grey;
+            z-index: 0;
+        }
+    }
+    .how-to-container{
+        width: 85%;
+        padding: 5rem 0;
+        min-height: 60vh;
+        flex-direction: column;
+        .how-to-card{
+            flex-direction: row;
+            align-items: center;
+            h4{
+                margin: 0;
+                margin-bottom: 2rem;
+            }
+            .how-to-image{
+                margin-right: 3rem;
+                width: 120px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .how-to{
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 13%;
+            width: 1rem;
+            height: 80%;
+            background-color: $light-grey;
+            z-index: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .how-to{
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 12.5%;
+            width: 1rem;
+            height: 75%;
+            background-color: $light-grey;
+            z-index: 0;
+            display: none;
+        }
+    }
+    .how-to-container{
+        flex-direction: column;
+        .how-to-card{
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 5rem;
+            h4{
+                margin: 3rem 0;
+            }
+            .how-to-image{
+                width: 100px;
+            }
+        }
+    }
+}

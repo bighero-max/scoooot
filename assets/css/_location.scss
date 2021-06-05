@@ -1,0 +1,100 @@
+.location-map{
+    width: 100%;
+    
+   
+}
+.location-map-container{
+    width: 85%;
+    min-height: 50rem;
+    padding-top: 3rem;
+    margin: 0 auto;
+    @include flex(center,center);
+    img{
+        width: 90%;
+    }
+    .mobile-image{
+        display: none;
+    }
+    .locations-text{
+        display: none;
+    }
+}
+
+
+// message us section start
+
+    .message-us{
+        width: 100%;
+    }
+    .message-us-container{
+        width: 85%;
+        min-height: 15vh;
+        margin: 8rem auto;
+        @include flex(space-between,center);
+       h2{
+           width: 30%;
+       }
+       p{
+           width: 40%;
+       }
+    }
+
+// message us section end
+
+    @media screen and (max-width:1180px) {
+        .message-us-container{
+            width: 90%;
+            h2{
+                width: 35%;
+            }
+        }
+    }
+    @media screen and (max-width:1080px) {
+        .message-us-container{
+            p{
+                width: 45%;
+            }
+        }
+    }
+    @media screen and (max-width:992px) {
+        .location-map-container{
+            img{
+                width: 100%;
+            }
+        }
+        .message-us-container{
+            width: 85%;
+            flex-direction: column;
+            text-align: center;
+           h2{
+               width: 100%;
+           }
+           p{
+               width: 100%;
+               margin: 3rem 0;
+           }
+        }
+    }
+    @media screen and (max-width:767px) {
+        .location-map-container{
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+            .mobile-image{
+                display: block;
+                margin: 4rem 0;
+            }
+            .desktop-image{
+                display: none;
+            }
+            .locations-text{
+                display: block;
+                width: 100%;
+                padding: 3rem;
+                margin-bottom: 2rem;
+                background: #FCB72B26;
+                text-align: center;
+            }
+        }
+    }

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 63.5%;
+}
+ @font-face{
+     font-family: 'LexendDeca-Regular';
+     src: url('../fonts/LexendDeca-Regular.ttf')
+ }
+ @font-face{
+     font-family: 'SpaceMono-Regular';
+     src: url('../fonts/SpaceMono-Regular.ttf')
+ }
+ @font-face{
+     font-family: 'SpaceMono-Bold';
+     src: url('../fonts/SpaceMono-Bold.ttf')
+ }
+
+//  Colors styles
+
+    $yellow:#FCB72B;
+    $dark-navy: #495567;
+    $dim-grey: #939CAA;
+    $light-grey: #E5ECF4;
+    $snow: #F2F5F9;
+    $light-yellow: #FFF4DF;
+
+//  Colors styles
+  h1{
+      font-size: 5.6rem;
+      font-family: 'SpaceMono-Bold';
+      line-height: 5.6rem;
+      letter-spacing: -2.5;
+      color: $dark-navy;
+  }
+  h2{
+      font-size: 4.4rem;
+      font-family: 'SpaceMono-Bold';
+      line-height: 4.4rem;
+      letter-spacing: -2.14;
+      color: $dark-navy;
+    
+  }
+  h3{
+      font-size: 3.8rem;
+      font-family: 'SpaceMono-Bold';
+      line-height: 4rem;
+      letter-spacing: -1.79;
+      color: $dark-navy;
+      
+  }
+  h4{
+      font-size: 2.4rem;
+      font-family: 'SpaceMono-Bold';
+      line-height: 2.8rem;
+      letter-spacing: -1.07;
+      color: $dark-navy;
+  }
+  h5{
+      font-size: 2rem;
+      font-family: 'SpaceMono-Bold';
+      line-height: 2rem;
+      letter-spacing: -1.07;
+      color: $dark-navy;
+  }
+  li,button,label,input,p,a{
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      font-family: 'LexendDeca-Regular';
+      color: $dim-grey;
+  }
+  a{
+      text-decoration: none;
+  }
+  ul{
+      list-style-type: none;
+  }
+  button{
+      background-color: $yellow;
+      padding: 1.2rem 3.2rem;
+      color: white;
+      font-family: 'SpaceMono-Regular';
+      border: 1px solid transparent;
+      cursor: pointer;
+  }
+  button:hover{
+      background-color: rgba(0, 0, 0, 0);
+      color: $yellow;
+      border: 1px solid $yellow;
+  }
+//   mixins
+
+        @mixin flex($justify,$align) {
+            display: flex;
+            justify-content: $justify;
+            align-items: $align;
+        }
+
+//   mixins

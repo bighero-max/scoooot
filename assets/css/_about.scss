@@ -1,0 +1,289 @@
+.about-head{
+    width: 100%;
+    background-image: url('../images/menu-background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: $dark-navy;
+        opacity: .6;
+        z-index: 0;
+    }
+    &>*{
+        z-index: 10;
+    }
+}
+.about-head-container{
+    width: 85%;
+    min-height: 30vh;
+    padding: 7rem 0;
+    margin: 0 auto;
+    &>*{
+        z-index: 10;
+    }
+    @include flex(flex-start,center);
+    h1{
+        color: white;
+    }
+   
+}
+.about-head-img{
+    position: absolute;
+    width: 180px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    img{
+        width: 100%;
+    }
+}
+.about-about{
+    padding-top: 12rem;
+}
+
+// section our values
+
+.our-values{
+    min-height: 100vh;
+    width: 100%;
+    h2{
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+}
+.our-values-container{
+    width: 85%;
+    margin: 0 auto;
+    @include flex(center,center);
+    
+}
+.our-values-card{
+    @include flex(flex-start,center);
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    .value-card-title{
+        margin: 2.5rem 0;
+    }
+    .our-values-card-img{
+        width: 24rem;
+        position: relative;
+        margin-bottom: 6rem;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+        .value-image-order{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 40%;
+            border-radius: 50%;
+            background-color: $yellow;
+            @include flex(center,center)
+        }
+    }
+}
+// section our values end
+
+// section FAQs
+
+.faqs{
+    width: 100%;
+    h2{
+        margin-bottom: 6rem;
+        text-align: center
+    }
+    
+}
+.faqs-container{
+    @include flex(flex-start,center);
+    min-height: 100vh;
+    width: 85%;
+    margin: 2rem auto;
+    flex-direction: column;
+    .faqs-box{
+        width: 100%;
+        @include flex(space-between,flex-start);
+        h3{
+            width: 30%;
+            padding-top: 2rem;
+        }
+        .accordions-box{
+            width: 65%;
+            @include flex(flex-start,flex-start);
+            flex-direction: column;
+        }
+        .accordion-content{
+            width: 100%;
+        }
+        .accordion{
+            width: 100%;
+            @include flex(space-between,center);
+            padding: 3rem;
+            background-color: $snow;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $light-yellow;
+            }
+            i{
+                font-size: 2rem;
+                color: $yellow;
+                padding-left: 1rem;
+            }
+            .fa-chevron-up{
+                display: none;
+            }
+        }
+        .active-accordion{
+            &:hover{
+                background-color: $snow;
+            }
+            .fa-chevron-up{
+                display: inline-block;
+            }
+            .fa-chevron-down{
+                display: none;
+            }
+        }
+        .panel{
+                background-color: $snow;
+                padding: 3rem;
+                padding-top: 0;
+                position: relative;
+                top: -1rem;
+                display: none;
+        }
+    }
+    
+}
+.active-accordion{
+    background-color: black;
+}
+
+// section FAQs end
+@media screen and (max-width:1072px) {
+    .our-values-container{
+        width: 90%;
+    }
+    .faqs-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width:1024px) {
+   .about-head-container{
+       min-height: 15vh;
+   }
+   .homepage-about{
+       min-height: 50vh;
+   }
+   .our-values{
+       min-height: 55vh;
+   }
+   .faqs-container{
+       min-height: 50vh;
+   }
+}
+@media screen and (max-width:992px) {
+    
+    .about-about{
+        .homepage-about-card{
+            margin-bottom: 5rem;
+        }
+        .about-about-card1{
+            .homepage-about-card-img{
+                .home-about-arrow{
+                    bottom: 10%;
+                }
+            }
+        }
+       .homepage-about-card2{
+        .home-about-mask{
+            display: none;
+        }
+        .home-about-arrow{
+            left: -60%;
+        }
+       }
+    }
+    .our-values-container{
+        width: 85%;
+        flex-direction: column;
+        .our-values-card{
+            margin-bottom: 5rem;
+        }
+        .our-values-card-img{
+            width: 30rem;
+        }
+    }
+    .faqs-container{
+        width: 85%;
+        min-height: 80vh;
+        .faqs-box{
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 4rem;
+            h3{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 4rem;
+            }
+            .accordions-box{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .about-head-container{
+        justify-content: center;
+        min-height: 25vh;
+        h1{
+            text-align: center;
+            font-size: 4.2rem;
+        }
+    }
+    .about-head-img{
+        display: none;
+    }
+    .our-values{
+        h2{
+            margin-bottom: 3.5rem;
+        }
+    }
+    .our-values-container{
+       
+        .our-values-card-img{
+            width: 25rem;
+        }
+    }
+    .faqs{
+        margin: 4rem 0;
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+    .faqs-container{
+        .faqs-box{
+            h3{
+                font-size: 3rem;
+            }
+            .accordions-box{
+              h4{
+                font-size: 2rem;
+              }
+            }
+            
+        }
+    }
+}

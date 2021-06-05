@@ -1,0 +1,151 @@
+.hero{
+    min-height: 90vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(73, 85, 103, .8), rgba(73, 85, 103, .8)),url('../images/hero-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include flex(center,flex-start);
+    flex-direction: column;
+    & > *{
+        z-index: 10;
+        color: white;
+        position: relative;
+    }
+   h1{
+       width: 45%;
+       font-size: 4.8rem;
+       margin-left: 10%;
+       position: relative;
+       top: 5rem;
+   }
+   button{
+       margin-left: 19%;
+       &:hover{
+           background-color: rgba(0, 0, 0,0);
+       }
+   }
+   
+}
+.hero-text-part{
+    & > *{
+        z-index: 10;
+        color: white;
+        position: relative;
+    }
+    img{
+        width: 100%;
+    }
+    @include flex(space-between,center);
+    .hero-text-box{
+        width: 35%;
+        @include flex(center,flex-start);
+        flex-direction: column;
+        p{
+            width: 100%;
+            color: white;
+        }
+    }
+    
+}
+.arrow-start{
+    padding-right: 5rem;
+}
+.arrow-finish{
+    margin-top: 12rem;
+    padding-left: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.hero-circle{
+    margin-bottom: 1rem;
+    align-self: flex-end;
+    margin-left: 4rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .arrow-start{
+        display: none;
+    }
+    .hero{
+        padding: 10rem 0;
+        padding-bottom: 20rem;
+        h1{
+            width: 80%;
+            margin: 0;
+            position: relative;
+            top: 0;
+        }
+        align-items: center;
+        text-align: center;
+        button{
+            margin-left: 0;
+        }
+    }
+    
+    .hero-text-part{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+       
+        .hero-text-box{
+            width: 85%;
+            margin: 5rem 0;
+        }
+    }
+    
+    .arrow-finish{
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+        position: absolute;
+        top: 65%;
+        div{
+            width: 15%;
+        }
+        .arrow-first{
+            width: 30%;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .hero{
+        h1{
+            font-size: 4rem;
+        }
+    }
+    .arrow-finish{
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+        position: absolute;
+        top: 55%;
+        left: -50%;
+        div{
+            display: none;
+        }
+        .arrow-first{
+            width: 70%;
+            display: block;
+            
+        }
+    }
+    .hero-text-part{
+        .hero-text-box{
+            width: 90%;
+            margin: 5rem 0;
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .arrow-finish{
+        top: 75%;
+    }
+    .arrow-first{
+        width: 90%;
+    }
+}

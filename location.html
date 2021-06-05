@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+              name="description"
+              content="Scootin is a scootins website"/>
+        <link rel="icon" href="/assets/images/vespa.png">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fa/css/all.min.css">
+        <title>Scoot</title>
+    </head>
+<body>
+    <header class="main-head">
+        <nav>
+            <button onclick="Open()" id='hamburger' class='bar'>
+                <svg width="32" height="32" viewBox="0 0 100 100">
+                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+          <a href="./index.html"><h1 class="site-logo">scoot</h1></a>  
+          <div class="nav-back-color" id="nav-menu-back"></div> 
+            <ul id="nav-menu">
+                <li class="nav-links"><a onclick="Open()" href="./about.html">About</a></li>
+                <li class="nav-links"><a onclick="Open()" href="./location.html">Location</a></li>
+                <li class="nav-links"><a onclick="Open()" href="./careers.html">Careers</a></li>
+            </ul>
+            <button>Get Scootin</button>
+        </nav>
+    </header>
+        <main>
+            <section class="about-head career-head">
+                <div class="about-head-container">
+                    <h1>Locations</h1>
+                </div>
+                <div class="about-head-img">
+                    <img src="./assets/images/menu-background-tool.png" alt="circle">
+                </div>
+            </section>
+            <section class="location-map">
+                <div class="location-map-container">
+                        <img class="desktop-image" src="./assets/images/map-new.png" alt="map">
+                        <img class="mobile-image" src="./assets/images/map-mobile.png" alt="map">
+                        <div class="locations-text"><h4>New York</h4></div>
+                        <div class="locations-text"><h4>London</h4></div>
+                        <div class="locations-text"><h4>Jakarta</h4></div>
+                        <div class="locations-text"><h4>Yokohama</h4></div>
+                    <!-- <div class="location-text1">
+                        <h4>New York</h4>
+                        <span></span>
+                    </div>
+                    <div class="location-text1 location-text2">
+                        <h4>London</h4>
+                        <span></span>
+                    </div>
+                    <div class="location-text1 location-text3">
+                        <h4>Yokohama</h4>
+                        <span></span>
+                    </div>
+                    <div class="location-text1 location-text4">
+                        <h4>Jakarta</h4>
+                        <span></span>
+                    </div> -->
+                </div>
+            </section>
+            <section class="message-us">
+                <div class="message-us-container">
+                    <h2>Your city not listed?</h2>
+                    <p>If you’d like to see Scoot in your hometown, be sure to let us know. We track requests and plan launches based on demand. Feel free to message us by clicking the link or messaging us on social.</p>
+                    <button>Message Us</button>
+                </div>
+            </section>
+        </main>
+    <footer>
+        <div class="footer-box">
+            <div class="footer-container">
+                <h3>Sign up and Scoot off today</h3>
+                <div class="store-buttons">
+                    <a href="#" class="apple-button apple-button2">
+                        <div class="apple-logo">
+                            <img src="./assets/images/apple.png" alt="apple">
+                        </div>
+                        <div class="apple-text ">
+                            <p>Available on the</p>
+                            <h5>AppStore</h5>
+                        </div>
+                    </a>
+                    <a href="#" class="apple-button">
+                        <div class="apple-logo">
+                            <img src="./assets/images/play-market.png" alt="play-market">
+                        </div>
+                        <div class="apple-text">
+                            <p>Get it on</p>
+                            <h5>GooglePlay</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+       <div class="footer-menu">
+        <div class="footer-links">
+            <a href="./index.html"><h2 class="site-logo">scoot</h2></a>
+            <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./location.html">Location</a></li>
+                <li><a href="./careers.html">Careers</a></li>
+            </ul>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+       </div>
+    </footer>
+    <script src="./assets/main.js"></script>
+    
+</body>
+</html>
